@@ -1,0 +1,48 @@
+format = """
+[](cyan)\
+$username\
+[](bg:#FCA17D fg:cyan)\
+$directory\
+[](fg:#FCA17D bg:#86BBD8)\
+$git_branch\
+$git_status\
+[](fg:#86BBD8 bg:#0696BB)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:#0696BB bg:#33658A)\
+$docker_context\
+[](fg:#33658A)\
+$line_break\
+[❯ ](cyan)\
+"""
+
+[username]
+show_always = true
+style_user = "bg:cyan fg:#000000 bold"
+style_root = "bg:cyan fg:#000000 bold"
+format = "[    Nakuzen ]($style)"
+disabled = false
+
+[directory]
+style = "bg:#FCA17D fg:#000000"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = " "
+style = "bg:#86BBD8 fg:#000000"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:#86BBD8 fg:#000000"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted) ]($style)]($style)"
+
+[time]
+disabled = true
