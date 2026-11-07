@@ -42,6 +42,7 @@ bars:
       center: ["clock"]
       right:
         [
+          "audio_visualizer",
           "hardware-grouper",
           "wallpapers",
           "volume",
@@ -357,3 +358,30 @@ widgets:
         sleep: ["\udb82\udd04", "Sleep"]
         lock: ["\uf023", "Lock"]
         cancel: ["\udb81\udf3a", "Cancel"]
+  audio_visualizer:
+    type: "yasb.audio_visualizer.AudioVisualizerWidget"
+    options:
+      style: dots
+      height: 12
+      smoothness: 80
+      sensitivity: 90
+      auto_gain: true
+      framerate: 60
+      freq_min: 500
+      freq_max: 12000
+      hide_idle: true
+      hide_idle_after: 2000
+      channels: stereo
+      mono_option: average
+      reverse: false
+      mirror: false
+      bars:
+        count: 10
+        width: 4
+        gap: 6
+      waves:
+        width: 80
+      dots:
+        count: 16
+        size: 2
+        gap: 2
